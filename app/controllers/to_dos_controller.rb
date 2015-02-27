@@ -18,23 +18,25 @@ class ToDosController < ApplicationController
   def create
     @to_do = ToDo.new(to_do_params)
     if @to_do.save
-      redirect_to root_path, notice: 'To Do was successfully created.'
+      redirect_to root_path, notice: 'Task was successfully created.'
     else
+      flash.now[:notice] = "Task box cannot be blank"
       render :new
     end
   end
 
   def update
     if @to_do.update(to_do_params)
-      redirect_to root_path, notice: 'To Do was successfully updated.'
+      redirect_to root_path, notice: 'Task was successfully updated.'
     else
+      flash.now[:notice] = "Task box cannot be blank"
       render :edit
     end
   end
 
   def destroy
     @to_do.destroy
-    redirect_to to_dos_url, notice: 'To Do was successfully destroyed.'
+    redirect_to to_dos_url, notice: 'Task was successfully destroyed.'
   end
 
   private

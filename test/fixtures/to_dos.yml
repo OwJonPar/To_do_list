@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  text: MyString
+  text: Billie Jean is not my lover
   row_order: 1
 
 two:
-  text: MyString
-  row_order: 1
+  text: Annie are you ok?
+  row_order: 2

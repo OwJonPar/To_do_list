@@ -14,9 +14,8 @@
    <% @to_dos.each do |t| %>
      <tr>
        <td><%= t.text %></td>
-       <td><%= link_to 'Show', t %></td>
-       <td><%= link_to 'Edit', edit_to_do_path(t) %></td>
-       <td><%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       <td><%= button_to 'Edit', edit_to_do_path(t), :method => "get" %></td>
+       <td><%= button_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' } %></td>
      </tr>
    <% end %>
  </tbody>
@@ -24,4 +23,4 @@
 
 <br>
 
-<%= link_to 'New To Do', new_to_do_path %>
+<%= button_to 'New To Do', new_to_do_path, :method => "get", id: "go-to-new" %>
