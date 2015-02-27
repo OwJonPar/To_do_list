@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-ToDo.create(text: "Do your laundry", row_order: 1 )
-ToDo.create(text: "Brush your teeth", row_order: 2 )
-ToDo.create(text: "Grocery shopping", row_order: 3 )
-ToDo.create(text: "Mow the grass", row_order: 4 )
-ToDo.create(text: "Eat all the kittens", row_order: 5 )
+ToDo.create(text: "Do your laundry", row_order: 1, due_date: "2015-02-28".to_date )
+ToDo.create(text: "Brush your teeth", row_order: 2, due_date: "2015-02-28".to_date)
+ToDo.create(text: "Grocery shopping", row_order: 3, due_date: "2015-02-28".to_date )
+ToDo.create(text: "Mow the grass", row_order: 4, due_date: "2015-02-28".to_date )
+ToDo.create(text: "Eat all the kittens", row_order: 5, due_date: "2015-02-28".to_date )
