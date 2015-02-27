@@ -1,4 +1,7 @@
 class ToDosController < ApplicationController
+  def index
+  end
+
   def new
   end
 
@@ -17,6 +20,4 @@ class ToDosController < ApplicationController
   def destroy
   end
 
-  def index
-  end
 end

@@ -1,18 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'to_dos/new'
-
-  get 'to_dos/edit'
-
-  get 'to_dos/create'
-
-  get 'to_dos/show'
-
-  get 'to_dos/update'
-
-  get 'to_dos/destroy'
-
-  get 'to_dos/index'
 
   resources :to_dos
 
