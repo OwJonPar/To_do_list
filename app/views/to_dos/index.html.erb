@@ -5,6 +5,7 @@
     <tr>
       <th>Task</th>
       <th>Due Date</th>
+      <th>Complete</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,10 @@
       <tr data-item-id=<%= "#{t.id}" %> class="item">
         <td><%= t.text %></td>
         <td><%= t.due_date %></td>
+        <td><%= form_for t, :remote => true do |f| %>
+          <%= f.check_box :complete, :class => 'complete-box' %>
+          <% end %>
+          </td>
         <td><%= link_to 'Edit', edit_to_do_path(t), :class => 'btn btn-default pull-right' %></td>
         <td><%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default pull-right' %></td>
       </tr>
