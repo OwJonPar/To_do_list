@@ -6,7 +6,7 @@ class ToDosController < ApplicationController
   end
 
   def update_row_order
-    @to_do = ToDo.find(to_do_params[:id])
+    @to_do = ToDo.find(to_do_params[:to_do_id])
     @to_do.row_order_position = to_do_params[:row_order_position]
     @to_do.save
 
@@ -53,7 +53,7 @@ class ToDosController < ApplicationController
     end
 
     def to_do_params
-      params.require(:to_do).permit(:text, :row_order_position, :due_date)
+      params.require(:to_do).permit(:to_do_id, :text, :due_date, :row_order_position)
     end
 
 end

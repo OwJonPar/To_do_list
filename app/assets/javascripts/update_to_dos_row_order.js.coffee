@@ -27,6 +27,6 @@ jQuery ->
           type: 'POST'
           url: '/to_dos/update_row_order'
           dataType: 'json'
-          data: { thing: {thing_id: item_id, row_order_position: position } }
+          data: { to_do: {to_do_id: item_id, row_order_position: position } }
         )
     )
