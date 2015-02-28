@@ -2,7 +2,15 @@ class ToDosController < ApplicationController
   before_action :set_to_do, only: [:show, :edit, :update, :destroy]
 
   def index
-    @to_dos = ToDo.all
+    @to_dos = ToDo.rank(:row_order).all
+  end
+
+  def update_row_order
+    @to_do = ToDo.find(to_do_params[:id])
+    @to_do.row_order_position = to_do_params[:row_order_position]
+    @to_do.save
+
+    render nothing: true # this is a POST action, updates sent via AJAX, no view rendered
   end
 
   def new
@@ -45,7 +53,7 @@ class ToDosController < ApplicationController
     end
 
     def to_do_params
-      params.require(:to_do).permit(:text, :row_order, :due_date)
+      params.require(:to_do).permit(:text, :row_order_position, :due_date)
     end
 
 end

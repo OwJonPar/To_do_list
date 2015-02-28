@@ -13,3 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery-ui
+//= require jquery-ui/sortable
+//= require jquery-ui/effect-highlight
+//= require bootstrap-sprockets
