@@ -53,7 +53,7 @@ class ToDosController < ApplicationController
     end
 
     def to_do_params
-      params.require(:to_do).permit(:to_do_id, :text, :due_date, :row_order_position)
+      params.require(:to_do).permit(:to_do_id, :text, :complete, :due_date, :row_order_position)
     end
 
 end
