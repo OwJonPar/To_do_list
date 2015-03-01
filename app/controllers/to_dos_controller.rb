@@ -3,6 +3,7 @@ class ToDosController < ApplicationController
 
   def index
     @to_dos = ToDo.rank(:row_order).all
+    @to_do = ToDo.new
   end
 
   def update_row_order
