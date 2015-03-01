@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<h1>Listing To Do</h1>
+<h1>To-Dos</h1>
 <table class="table table-bordered table-striped" id="sortable">
   <thead>
     <tr>
@@ -18,11 +18,10 @@
           <%= f.check_box :complete, :class => 'complete-box' %>
           <% end %>
           </td>
-        <td><%= link_to 'Edit', edit_to_do_path(t), :class => 'btn btn-default pull-right' %></td>
-        <td><%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default pull-right' %></td>
+        <td><%= link_to 'Edit', edit_to_do_path(t), :class => "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-success" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= button_to 'New To Do', new_to_do_path, :method => "get", id: "go-to-new" %>
+<%= link_to 'New To-Do',new_to_do_path, :class => "btn btn-success" %>
